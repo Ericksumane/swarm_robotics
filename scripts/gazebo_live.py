@@ -296,6 +296,7 @@ def main():
   terminal_controller=None;terminal_started_s=None
   terminal_correction_ticks=0;terminal_brake_ticks=0
   stride_scale=1. if args.go2_stride_cruise_only else args.go2_forward_stride_scale
+  previous_go2_forward=0.
   stride_changes=[]
   precision_started_s=None
   precision_settling=False
@@ -622,11 +623,22 @@ def main():
     if args.mixed:
      from swarm_core.mixed_commands import constrain_mixed_commands
      commands=constrain_mixed_commands(commands)
+    ramp_go2=(args.mixed and args.cooperative_feedback and translation is not None
+              and terminal_controller is None)
+    if ramp_go2:
+     # Limit forward acceleration at the 10 Hz command rate. Use the last
+     # applied command so a clearance stop cannot accumulate a hidden ramp.
+     speed,yaw=commands[0]
+     if speed>0.:
+      commands=[list(command) for command in commands]
+      commands[0]=[min(speed,1.05,previous_go2_forward+.08),yaw]
+    go2_clearance_limited=False
     if telemetry is not None:
      commands=telemetry.constrain_commands(control_states,telemetry_ages,commands)
     if args.wheeltec_arc_actor:
      filtered_commands=CooperativeTelemetry.filter_local_clearance(states,commands)
      clearance_filtered=filtered_commands!=commands
+     go2_clearance_limited=filtered_commands[0]!=commands[0]
      local_clearance_stops+=int(clearance_filtered)
      if (translation is None and formation_motion_started_s is not None
          and control_states is not None):
@@ -662,6 +674,7 @@ def main():
      for i,(v,w) in enumerate(commands):
       if first_motion_commands_s[i] is None and (v or w):
        first_motion_commands_s[i]=clock-origin
+    previous_go2_forward=max(0.,commands[0][0]) if ramp_go2 else 0.
     transport.commands(commands)
     if args.mixed:
      for _ in range(100//physics_chunk_steps):
@@ -680,7 +693,7 @@ def main():
     if translation is not None:
      response.update(translation.metrics(states),modes=['cooperative_terminal_recovery' if terminal_controller is not None else 'cooperative_translation']*3)
     if telemetry is not None:response['cooperative_telemetry_age_s']=telemetry_ages
-    log.write(json.dumps(dict(clock_s=clock,elapsed_s=elapsed,states=states,odometry_age_s=ages,applied_commands=commands,policy=response,**({'reference_primitive':index} if reference else {})))+chr(10));log.flush()
+    log.write(json.dumps(dict(clock_s=clock,elapsed_s=elapsed,states=states,odometry_age_s=ages,applied_commands=commands,go2_clearance_limited=go2_clearance_limited,policy=response,**({'reference_primitive':index} if reference else {})))+chr(10));log.flush()
     if int(elapsed)//5!=last_report:
      last_report=int(elapsed)//5;print(f"sim={elapsed:.1f}s modes={response['modes']} valid={response.get('valid_neighbors')} ready={response.get('startup_ready_steps')} pair_error={response.get('max_pair_error_m')} RTF={elapsed/max(time.monotonic()-started,1e-9):.2f}",flush=True)
     if cooperative:
