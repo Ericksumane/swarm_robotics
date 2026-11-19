@@ -1,6 +1,6 @@
 # AI-Based Cooperative and Decentralized Control for Robot Swarms Under Communication Constraints
 
-Project developed by Erick Sumane for my internship, which began in September
+Project developed during my internship in September
 2026 at JKK (Járműipari Kutatóközpont, Vehicle Industry Research Center),
 investigating AI-based cooperative and decentralized control methods for robot
 swarms. The work focuses on developing and evaluating control strategies under
@@ -35,7 +35,7 @@ bash scripts/run_mixed_realtime.sh severe
 
 Each launch samples new starting poses. Add a numeric seed to reproduce them.
 The launcher verifies the selected actor hashes and sets a wall-clock pacing
-target of 0.98. Gazebo can run below that target when the physics, bridge, or
+target of 0.98. Gazebo can run below that target when the physics, bridge or
 rendering cannot keep up. Check the terminal RTF and the recorded
 `target_real_time_factor` and `measured_real_time_factor` in `summary.json`.
 The communication profiles apply simulated communication impairments.
