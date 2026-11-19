@@ -5,23 +5,21 @@ Project developed by Erick Sumane for my internship, which began in September
 investigating AI-based cooperative and decentralized control methods for robot
 swarms. The work focuses on developing and evaluating control strategies under
 practical inter-robot communication constraints, including limited bandwidth,
-latency, packet loss, communication range, and changing network topology.
+latency, packet loss, communication range and changing network topology.
 Potential approaches, including multi-agent reinforcement learning, are tested
 in simulation and, where feasible, on mobile robot hardware.
 
 The mixed-fleet mission starts three robots from dispersed planar poses, forms
-an aligned triangle with 1.20 m between robot centres, translates it 5 m in the
+an aligned triangle with 1.20 m between robot centres, translates it 5 meters in the
 mission direction and stops with the same heading and spacing. Gazebo runs the
 controllers in closed loop with simulated odometry and physics. The models
-represent a Go2 Edu, a Jackal J100, and a provisional Ackermann WheelTec RosBot Pro.
+represent a Go2 Edu, a Jackal J100 and a provisional Ackermann WheelTec RosBot Pro.
 
 The selected mixed-fleet simulation uses four frozen learned components
-(Go2 pose, WheelTec arc, Jackal pose, and translation speed). A programmed
+(Go2 pose, WheelTec arc, Jackal pose and translation speed). A programmed
 controller plans feasible arcs, coordinates phase transitions, applies
-clearance constraints, and corrects the final pose. The mixed-fleet campaign
-refines those components with teacher-labelled planar rollouts. The original
-generic-kinematics MAPPO implementation remains in `learning/` and has
-separate artifacts and documentation.
+clearance constraints and corrects the final pose. The mixed-fleet campaign
+refines those components with teacher-labelled planar rollouts.
 
 ## Run the mixed-fleet simulation
 
@@ -56,7 +54,7 @@ for the finite set of verified runs.
 | `src/swarm_core/` | Geometry, dynamics, communication and runtime |
 | `configs/` | Task, platform and communication settings |
 | `policies/`, `experiments/` | Frozen actors, provenance and experiment records |
-| `learning/`, `ros2_ws/` | Generic research and ROS packages |
+| `ros2_ws/` | ROS 2 packages |
 | `docs/` | Requirements, results and deployment notes |
 
 
