@@ -57,6 +57,41 @@ for the finite set of verified runs.
 | `docs/` | Requirements, results and deployment notes |
 
 
+## Repository layout
+
+```text
+swarm_robotics/
+├── README.md
+├── GETTING_STARTED.md                        # Quick start for all four Gazebo profiles
+├── scripts/
+│   ├── run_mixed_realtime.sh                 # Launches the live Gazebo mission
+│   ├── gazebo_live.py                       # Connects Gazebo physics and odometry to the controller
+│   ├── cooperative_pose_reference.py        # Coordinates formation, travel, and final alignment
+│   └── train_mixed_actor_campaign.py         # Trains the mixed-fleet policy components
+├── configs/
+│   └── communication/
+│       ├── nominal.json
+│       ├── good.json
+│       ├── moderate.json
+│       └── severe.json
+├── src/
+│   └── swarm_core/                          # Robot dynamics, geometry, and communication models
+├── policies/
+│   └── mixed_campaign_160k/                 # Frozen Go2, WheelTec, Jackal, and travel-speed weights
+├── experiments/
+│   └── results/
+│       └── final_random_acceptance.json     # Recorded outcomes for the randomized Gazebo trials
+├── docs/
+│   └── deployment/
+│       ├── SIMULATION_SETUP.md              # ROS 2 and Gazebo installation guide
+│       ├── LAB_TRIAL.md                     # Odometry and communication checks before motion
+│       └── MOTION_TRIAL.md                  # Instructions for supervised hardware trials
+└── deliverables/
+    ├── swarm_mixed_distributed_shadow.tar.gz # Diagnostic test package with no motor output
+    └── swarm_mixed_motion_trial.tar.gz       # Experimental package for supervised motion trials
+```
+
+
 ## Laboratory installation
 
 - [Shadow test package](deliverables/swarm_mixed_distributed_shadow.tar.gz) and
