@@ -1,0 +1,100 @@
+{
+  "status": "research_partial_disperse_startup_not_hardware_validated",
+  "architecture": "local_learned_startup_v1",
+  "actor_bundle": "experiments/runs/dispersed_recovery_validation_001/selected_startup_bundle.pt",
+  "actor_bundle_sha256": "91b8912e57180a74eab177f079fe2b65a30bca8c3976c4a03c2fa7c9ac83ed17",
+  "task": "configs/tasks/dispersed_full_aligned.json",
+  "replay": "experiments/runs/dispersed_recovery_validation_001/gazebo_demo",
+  "demo_seed": 75000001,
+  "demo_profile": "good",
+  "demo_limit_s": 120,
+  "formation_aggregate": {
+    "nominal": {
+      "episodes": 80,
+      "successes": 78,
+      "collisions": 1
+    },
+    "good": {
+      "episodes": 80,
+      "successes": 78,
+      "collisions": 1
+    }
+  },
+  "alignment": {
+    "nominal": {
+      "successes": 40,
+      "collisions": 0
+    },
+    "good": {
+      "successes": 40,
+      "collisions": 0
+    }
+  },
+  "complete_mission": {
+    "nominal_120s": {
+      "successes": 8,
+      "strict_successes": 7,
+      "collisions": 0,
+      "acquired": 19,
+      "aligned": 18,
+      "started_move": 18
+    },
+    "good_120s": {
+      "successes": 8,
+      "strict_successes": 7,
+      "collisions": 0,
+      "acquired": 19,
+      "aligned": 18,
+      "started_move": 18
+    },
+    "nominal_240s": {
+      "successes": 18,
+      "strict_successes": 16,
+      "collisions": 0,
+      "acquired": 20,
+      "aligned": 19,
+      "started_move": 19
+    },
+    "good_240s": {
+      "successes": 19,
+      "strict_successes": 17,
+      "collisions": 0,
+      "acquired": 20,
+      "aligned": 20,
+      "started_move": 20
+    }
+  },
+  "complete_mission_episodes": 20,
+  "scope": "Uniform dispersed positions in [-1.5,1.5] m, >=0.7 m initial separation, uniform headings; three identical synthetic unicycles; ideal shared localization; nominal/good only",
+  "hardware_validated": false,
+  "full_mission_validated": false,
+  "translation_registry_preserved": "experiments/selected_translation_candidate.json",
+  "report": "docs/dispersed_recovery_results.md",
+  "rejected_refinement": "experiments/runs/dispersed_hard_validation_001/summary.json",
+  "component_evaluation": {
+    "baseline_acquisition_nominal": {
+      "successes": 20,
+      "collisions": 2
+    },
+    "baseline_acquisition_good": {
+      "successes": 21,
+      "collisions": 2
+    },
+    "acquisition_nominal": {
+      "successes": 38,
+      "collisions": 1
+    },
+    "acquisition_good": {
+      "successes": 38,
+      "collisions": 1
+    },
+    "alignment_nominal": {
+      "successes": 40,
+      "collisions": 0
+    },
+    "alignment_good": {
+      "successes": 40,
+      "collisions": 0
+    }
+  }
+}

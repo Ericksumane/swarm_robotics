@@ -1,0 +1,20 @@
+{
+  "reward_version": "geometry_control_control_v1",
+  "formation": 5.0,
+  "formation_progress": 10.0,
+  "translation_progress": 15.0,
+  "proximity": 10.0,
+  "proximity_margin_m": 0.3,
+  "time": 0.02,
+  "settling": 0.2,
+  "success_bonus": 20.0,
+  "failure_penalty": 50.0,
+  "heading": 0.5,
+  "turning": 0.1,
+  "speed_spread": 2.0,
+  "goal_heading": 0.5,
+  "heading_absolute": 1.0,
+  "heading_progress": 10.0,
+  "turning_absolute": 0.2,
+  "formation_barrier": 0.0
+}

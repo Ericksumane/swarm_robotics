@@ -1,0 +1,12 @@
+{
+  "reward_version": "translate_stop_v1",
+  "formation": 5.0,
+  "formation_progress": 10.0,
+  "translation_progress": 15.0,
+  "proximity": 10.0,
+  "proximity_margin_m": 0.3,
+  "time": 0.02,
+  "settling": 0.2,
+  "success_bonus": 20.0,
+  "failure_penalty": 50.0
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "total_environment_steps_per_profile": 4096,
+  "total_environment_steps": 4096,
+  "profiles": [
+    "nominal"
+  ],
+  "counting": "25000 three-robot environment steps per profile; 100000 total. Smoke/evaluation excluded.",
+  "allocation_per_profile": {
+    "approach": 4096
+  },
+  "seed": 187010,
+  "actor_lr": 1e-05,
+  "epochs": 3,
+  "rollout": 128,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.1,
+  "exploration_std": 0.02,
+  "critic_only_warmup_updates": 4,
+  "source_bundle": "experiments/runs/mixed_steering_travel_stop_pilot_001/combined_experimental.pt",
+  "source_sha256": "af6e225c4f4d28f6570f93be3729984802490cf2e9260c07f28b173ecae9e521",
+  "task_linear_speed_scale": 1.0,
+  "task_overrides": {
+    "approach": "configs/tasks/mixed_braking_approach_pilot.json"
+  },
+  "reward_overrides": {
+    "approach": "experiments/runs/arrival_refinement_100k_001/reward.json"
+  },
+  "scope": "Nominal approach pilot with the braking envelope active during MAPPO rollouts.",
+  "preserve_task_initialization": true
+}

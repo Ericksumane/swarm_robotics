@@ -1,0 +1,12 @@
+{
+  "robot_id": 2,
+  "session": "trial_001",
+  "odom_topic": "/robot_2/raw_odom",
+  "odom_frame": "odom",
+  "body_frame": "base_link",
+  "initial_pose": [
+    0,
+    0.7,
+    -10
+  ]
+}

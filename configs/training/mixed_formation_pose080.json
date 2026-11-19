@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "total_environment_steps_per_profile": 30000,
+  "total_environment_steps": 30000,
+  "profiles": [
+    "nominal"
+  ],
+  "counting": "One step advances all three robots in the nominal environment.",
+  "allocation_per_profile": {
+    "formation_fresh": 30000
+  },
+  "seed": 186920,
+  "actor_lr": 1e-05,
+  "epochs": 3,
+  "rollout": 128,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.1,
+  "exploration_std": 0.05,
+  "critic_only_warmup_updates": 4,
+  "source_bundle": "experiments/runs/mixed_formation_capabilities080_001/candidate_bundle.pt",
+  "source_sha256": "3241703387c8a5731aa66ae2d0b985490219ed783ab0b20615195e94f9e6b1e0",
+  "task_linear_speed_scale": 1.0,
+  "task_overrides": {
+    "formation_fresh": "configs/tasks/mixed_formation_pose080.json"
+  },
+  "reward_overrides": {
+    "formation_fresh": "configs/training/mixed_formation_pose_reward.json"
+  },
+  "scope": "Nominal three-robot position and heading formation with reset poses from Gazebo reference maneuvers.",
+  "preserve_task_initialization": true
+}

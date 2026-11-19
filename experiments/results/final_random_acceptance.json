@@ -1,0 +1,122 @@
+[
+  {
+    "profile": "nominal",
+    "seed": 227093656,
+    "path": "experiments/runs/final_random_acceptance_001/nominal_227093656",
+    "reason": "cooperative_mission_success",
+    "seconds": 80.5,
+    "minimum_center_m": 1.008957102064915,
+    "translation": {
+      "translation_m": 4.966431422727333,
+      "max_destination_error_m": 0.03553189518794944,
+      "max_heading_error_deg": 1.053626839365229,
+      "max_pair_error_m": 0.007182582173346663,
+      "settled": true
+    }
+  },
+  {
+    "profile": "nominal",
+    "seed": 1555297313,
+    "path": "experiments/runs/final_random_acceptance_001/nominal_1555297313",
+    "reason": "cooperative_mission_success",
+    "seconds": 112.5,
+    "minimum_center_m": 0.6959545410981955,
+    "translation": {
+      "translation_m": 4.9711789554201395,
+      "max_destination_error_m": 0.03535867940207226,
+      "max_heading_error_deg": 0.9775180369268456,
+      "max_pair_error_m": 0.020666408542470815,
+      "settled": true
+    }
+  },
+  {
+    "profile": "good",
+    "seed": 676531854,
+    "path": "experiments/runs/final_random_acceptance_001/good_676531854",
+    "reason": "cooperative_mission_success",
+    "seconds": 106.1,
+    "minimum_center_m": 0.7769138836767909,
+    "translation": {
+      "translation_m": 4.991488363134432,
+      "max_destination_error_m": 0.025156595935941824,
+      "max_heading_error_deg": 0.5611314092085536,
+      "max_pair_error_m": 0.03547886530274069,
+      "settled": true
+    }
+  },
+  {
+    "profile": "good",
+    "seed": 1251066829,
+    "path": "experiments/runs/formation_start_yaw_fix_001/good_1251066829",
+    "reason": "cooperative_mission_success",
+    "seconds": 79.8,
+    "minimum_center_m": 0.9057903173432045,
+    "translation": {
+      "translation_m": 4.991324522442213,
+      "max_destination_error_m": 0.03192828042759685,
+      "max_heading_error_deg": 0.4942942378367911,
+      "max_pair_error_m": 0.021932027820614763,
+      "settled": true
+    }
+  },
+  {
+    "profile": "moderate",
+    "seed": 2895921022,
+    "path": "experiments/runs/dispersed_deadline_verify_001/moderate_2895921022",
+    "reason": "cooperative_mission_success",
+    "seconds": 89.7,
+    "minimum_center_m": 0.7934520482104988,
+    "translation": {
+      "translation_m": 5.0014265801734945,
+      "max_destination_error_m": 0.037846284777775706,
+      "max_heading_error_deg": 2.768818338216047,
+      "max_pair_error_m": 0.027177875841672527,
+      "settled": true
+    }
+  },
+  {
+    "profile": "moderate",
+    "seed": 1073831986,
+    "path": "experiments/runs/final_random_acceptance_001/moderate_1073831986",
+    "reason": "cooperative_mission_success",
+    "seconds": 93.6,
+    "minimum_center_m": 1.0220350244211027,
+    "translation": {
+      "translation_m": 4.9964422961822175,
+      "max_destination_error_m": 0.028239184343775887,
+      "max_heading_error_deg": 0.9337127863507528,
+      "max_pair_error_m": 0.04746336910524418,
+      "settled": true
+    }
+  },
+  {
+    "profile": "severe",
+    "seed": 4073149796,
+    "path": "experiments/runs/final_random_acceptance_001/severe_4073149796",
+    "reason": "cooperative_mission_success",
+    "seconds": 112.7,
+    "minimum_center_m": 0.8913358685720201,
+    "translation": {
+      "translation_m": 5.035008826639259,
+      "max_destination_error_m": 0.0523778725173857,
+      "max_heading_error_deg": 1.7807734519104623,
+      "max_pair_error_m": 0.03302881516708256,
+      "settled": true
+    }
+  },
+  {
+    "profile": "severe",
+    "seed": 3403002117,
+    "path": "experiments/runs/dispersed_deadline_verify_001/severe_3403002117",
+    "reason": "cooperative_mission_success",
+    "seconds": 176.0,
+    "minimum_center_m": 0.7106250000602186,
+    "translation": {
+      "translation_m": 5.027993233721216,
+      "max_destination_error_m": 0.043779167258857325,
+      "max_heading_error_deg": 2.6660109846635653,
+      "max_pair_error_m": 0.02559650351943854,
+      "settled": true
+    }
+  }
+]

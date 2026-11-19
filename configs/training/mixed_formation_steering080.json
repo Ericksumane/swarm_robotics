@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "total_environment_steps_per_profile": 20000,
+  "total_environment_steps": 20000,
+  "profiles": [
+    "nominal"
+  ],
+  "counting": "One step advances all three robots in the nominal environment.",
+  "allocation_per_profile": {
+    "formation_fresh": 20000
+  },
+  "seed": 186981,
+  "actor_lr": 1e-05,
+  "epochs": 3,
+  "rollout": 128,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.1,
+  "exploration_std": 0.05,
+  "critic_only_warmup_updates": 4,
+  "source_bundle": "experiments/runs/mixed_formation_pose080_001/candidate_bundle.pt",
+  "source_sha256": "42272b2554af70b44a8d2fb3c0be6425616f70a5bc7d02ff40a457afee23c6dd",
+  "task_linear_speed_scale": 1.0,
+  "task_overrides": {
+    "formation_fresh": "configs/tasks/mixed_formation_steering080.json"
+  },
+  "reward_overrides": {
+    "formation_fresh": "configs/training/mixed_formation_pose_reward.json"
+  },
+  "scope": "Nominal pose-acquisition pilot with measured Gazebo steering response and near-goal curriculum.",
+  "preserve_task_initialization": true
+}

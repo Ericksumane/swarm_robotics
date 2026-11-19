@@ -1,0 +1,20 @@
+{
+  "status": "experimental_planar_holdout_completed",
+  "source": "experiments/runs/mixed_160k_arrival_campaign_1m_001/checkpoint_0125",
+  "additional_environment_steps": 1000000,
+  "steps_by_profile": {
+    "nominal": 250000,
+    "good": 250000,
+    "moderate": 250000,
+    "severe": 250000
+  },
+  "actor_directory": "policies/mixed_arrival_1m_experimental",
+  "sha256": {
+    "go2_actor.json": "41ce456b9101476c87bfd657bcf76f595195b3c0f4423a3547065e9a66ded351",
+    "wheeltec_actor.json": "da9ef73d729aeee98500c78e78e39fab8e734abd229faa0265362ee7f7096f03",
+    "jackal_actor.json": "ebb330e60fb132d82fe998e5f49de9053779ad1ae7bafd713613093131fd09ac",
+    "translation_actor.json": "db7cbca7f75687da77da7af5a0bc6bd2ae6ec4217a5f6749eed9ba0b17978d1c"
+  },
+  "planar_holdout": "experiments/runs/mixed_160k_arrival_campaign_1m_001/paired_holdout.json",
+  "hardware_approved": false
+}

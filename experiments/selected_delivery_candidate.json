@@ -1,0 +1,26 @@
+{
+  "actor_bundle": "experiments/runs/arrival_refinement_100k_001/training/candidate_bundle.pt",
+  "sha256": "ec542ed24149fe46f77a0bfeaff162ccc043acf7f736a72dcd60dff7f985911b",
+  "status": "arrival_refinement_selected_pending_final_acceptance",
+  "weights_changed": true,
+  "report": "docs/arrival_refinement_100k_results.md",
+  "hardware_approved": false,
+  "training_total_environment_steps": 100000,
+  "training_steps_per_profile": {
+    "nominal": 25000,
+    "good": 25000,
+    "moderate": 25000,
+    "severe": 25000
+  },
+  "trained_experts": [
+    "approach"
+  ],
+  "changed_experts": {
+    "history": false,
+    "fresh": false,
+    "alignment": false,
+    "cruise": false,
+    "degraded": false,
+    "approach": true
+  }
+}

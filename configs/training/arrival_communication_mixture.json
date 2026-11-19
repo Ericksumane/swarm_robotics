@@ -1,0 +1,91 @@
+{
+  "profiles": [
+    {
+      "schema_version": 1,
+      "profile_name": "nominal",
+      "profile_status": "synthetic_development_configuration",
+      "transmission_frequency_hz": 10.0,
+      "delay_s": 0.0,
+      "loss_probability": 0.0,
+      "max_information_age_s": 0.5,
+      "payload_size_bytes": 64
+    },
+    {
+      "schema_version": 1,
+      "profile_name": "good",
+      "profile_status": "synthetic_not_measured_wifi",
+      "transmission_frequency_hz": 10.0,
+      "delay_s": 0.02,
+      "loss_probability": 0.01,
+      "max_information_age_s": 0.5,
+      "payload_size_bytes": 64,
+      "channel_options": {
+        "jitter_s": 0.01,
+        "bandwidth_bytes_per_s": 10000.0,
+        "queue_capacity_bytes": 2048,
+        "burst_enter_probability": 0.001,
+        "burst_exit_probability": 0.8,
+        "bad_state_loss_probability": 0.95,
+        "outages": []
+      }
+    },
+    {
+      "schema_version": 1,
+      "profile_name": "moderate",
+      "profile_status": "synthetic_not_measured_wifi",
+      "transmission_frequency_hz": 10.0,
+      "delay_s": 0.1,
+      "loss_probability": 0.1,
+      "max_information_age_s": 0.5,
+      "payload_size_bytes": 64,
+      "channel_options": {
+        "jitter_s": 0.05,
+        "bandwidth_bytes_per_s": 2000.0,
+        "queue_capacity_bytes": 2048,
+        "burst_enter_probability": 0.02,
+        "burst_exit_probability": 0.5,
+        "bad_state_loss_probability": 0.95,
+        "outages": [
+          [
+            15.0,
+            16.0
+          ]
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "profile_name": "severe",
+      "profile_status": "synthetic_not_measured_wifi",
+      "transmission_frequency_hz": 10.0,
+      "delay_s": 0.3,
+      "loss_probability": 0.3,
+      "max_information_age_s": 0.5,
+      "payload_size_bytes": 64,
+      "channel_options": {
+        "jitter_s": 0.2,
+        "bandwidth_bytes_per_s": 500.0,
+        "queue_capacity_bytes": 2048,
+        "burst_enter_probability": 0.1,
+        "burst_exit_probability": 0.2,
+        "bad_state_loss_probability": 0.95,
+        "outages": [
+          [
+            10.0,
+            12.0
+          ],
+          [
+            25.0,
+            28.0
+          ]
+        ]
+      }
+    }
+  ],
+  "probabilities": [
+    0.125,
+    0.25,
+    0.125,
+    0.5
+  ]
+}

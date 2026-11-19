@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "total_environment_steps": 100000,
+  "total_environment_steps_per_profile": 25000,
+  "profiles": [
+    "nominal",
+    "good",
+    "moderate",
+    "severe"
+  ],
+  "allocation_per_profile": {
+    "formation_history": 25000
+  },
+  "counting": "100000 three-robot environment steps total; 25000/profile; smoke/evaluation excluded.",
+  "seed": 105155,
+  "actor_lr": 5e-06,
+  "epochs": 3,
+  "rollout": 128,
+  "gamma": 0.999,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.1,
+  "exploration_std": 0.04,
+  "critic_only_warmup_updates": 4,
+  "source_bundle": "experiments/runs/arrival_refinement_100k_001/training/candidate_bundle.pt",
+  "source_sha256": "ec542ed24149fe46f77a0bfeaff162ccc043acf7f736a72dcd60dff7f985911b",
+  "task_linear_speed_scale": 1.0,
+  "preserve_task_initialization": true,
+  "task_overrides": {
+    "formation_history": "experiments/runs/formation_clearance_100k_001/task.json"
+  },
+  "reward_overrides": {
+    "formation_history": "experiments/runs/formation_clearance_100k_001/reward.json"
+  },
+  "scope": "Only formation-history expert adapted; fresh formation, alignment, cruise, degraded cruise and validated arrival unchanged. Deployment gate/criteria unchanged."
+}

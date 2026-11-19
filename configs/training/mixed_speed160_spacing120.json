@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "total_environment_steps_per_profile": 125000,
+  "total_environment_steps": 500000,
+  "profiles": [
+    "nominal",
+    "good",
+    "moderate",
+    "severe"
+  ],
+  "counting": "25000 three-robot environment steps per profile; 100000 total. Smoke/evaluation excluded.",
+  "allocation_per_profile": {
+    "formation_history": 35000,
+    "formation_fresh": 20000,
+    "alignment": 10000,
+    "cruise": 20000,
+    "cruise_degraded": 15000,
+    "approach": 25000
+  },
+  "seed": 116020,
+  "actor_lr": 1e-05,
+  "epochs": 3,
+  "rollout": 128,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.1,
+  "exploration_std": 0.02,
+  "critic_only_warmup_updates": 4,
+  "source_bundle": "experiments/runs/arrival_refinement_100k_001/training/candidate_bundle.pt",
+  "source_sha256": "ec542ed24149fe46f77a0bfeaff162ccc043acf7f736a72dcd60dff7f985911b",
+  "task_linear_speed_scale": 1.0,
+  "task_overrides": {
+    "approach": "experiments/runs/arrival_refinement_100k_001/task.json"
+  },
+  "reward_overrides": {
+    "approach": "experiments/runs/arrival_refinement_100k_001/reward.json"
+  },
+  "scope": "Experimental 500000-step MAPPO adaptation at 1.60 m/s and 1.20 m center spacing. Final headings must agree with the mission direction.",
+  "preserve_task_initialization": true,
+  "mission_profile": {
+    "max_forward_speed_mps": 1.6,
+    "desired_pair_distance_m": 1.2,
+    "final_heading_tolerance_rad": 0.08726646259971647,
+    "arrival_heading_weight": 8.0
+  }
+}

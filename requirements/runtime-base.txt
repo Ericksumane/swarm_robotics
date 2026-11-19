@@ -1,0 +1,5 @@
+numpy==1.26.4
+gymnasium==0.29.1
+absl-py==2.5.1
+setuptools==75.8.0
+wheel==0.45.1

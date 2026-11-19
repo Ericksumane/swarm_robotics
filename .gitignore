@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# ROS 2 build outputs
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Generated experiment outputs
+experiments/runs/*
+!experiments/runs/.gitkeep
+
+# Large generated artifacts
+*.bag
+*.db3
+*.mcap
+*.pt
+*.pth
+*.onnx
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+experiments/runtime/
+/go2_gait_ws/
+/external/unitree_ros/
+/robot.json
+/.env
+/configs/training/requirements-installed.txt

@@ -1,0 +1,11 @@
+{
+  "status": "experimental",
+  "actor_directory": "policies/mixed_5m_jackal_reference",
+  "sha256": {
+    "go2_actor.json": "d05bd953c7aaa27f6db62d25802738dfeb3a5da3c438f74c6c5ce7e807f1c573",
+    "wheeltec_actor.json": "984c4884c6f7c96a564a9544460f771314b70f3bbbd95b76ec78a9669f08e24e",
+    "jackal_actor.json": "b4fe591a52cceeb21660141c6b0b5473d26c118bea98c8982304a8df8d8e2807",
+    "translation_actor.json": "233a836eb9909b5892ea43a5e8ac78d93bb5041b86c41dd7d572deb00d795e16"
+  },
+  "hardware_approved": false
+}

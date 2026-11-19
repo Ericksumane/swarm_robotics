@@ -1,0 +1,7 @@
+{
+  "reward_version": "formation_hold_v2",
+  "formation_weight": 1.0,
+  "motion_weight": 0.05,
+  "collision_penalty": 10.0,
+  "outside_area_penalty": 10.0
+}

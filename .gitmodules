@@ -1,0 +1,3 @@
+[submodule "external/on-policy"]
+	path = external/on-policy
+	url = https://github.com/marlbenchmark/on-policy.git

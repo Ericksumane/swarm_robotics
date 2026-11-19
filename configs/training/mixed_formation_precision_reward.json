@@ -1,0 +1,14 @@
+{
+  "reward_version": "mixed_formation_precision_v1",
+  "formation_weight": 12.0,
+  "motion_weight": 0.05,
+  "collision_penalty": 200.0,
+  "outside_area_penalty": 200.0,
+  "progress_weight": 30.0,
+  "success_bonus": 30.0,
+  "proximity_weight": 30.0,
+  "proximity_margin_m": 0.3,
+  "progress_metric": "max_pair_error_m",
+  "ready_reward_per_s": 0.5,
+  "settling_only_within_formation": true
+}

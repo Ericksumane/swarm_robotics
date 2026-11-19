@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "proposed_simulation_acceptance_criteria_not_hardware_approval",
+  "scope": "Three robots; formation, 5 m translation, stop and sustained hold",
+  "episodes_per_profile": 100,
+  "profiles": {
+    "nominal": {
+      "min_completion_rate": 0.95,
+      "formation_tolerance_m": 0.1
+    },
+    "good": {
+      "min_completion_rate": 0.95,
+      "formation_tolerance_m": 0.1
+    },
+    "moderate": {
+      "min_completion_rate": 0.9,
+      "formation_tolerance_m": 0.15
+    },
+    "severe": {
+      "min_completion_rate": 0.8,
+      "formation_tolerance_m": 0.2
+    }
+  },
+  "collision_requirement": "zero_observed_collisions_in_frozen_benchmark",
+  "seed_policy": "Separate development and untouched final seeds; any tuning invalidates final evaluation",
+  "goal_tolerance_m": 0.2,
+  "hold_observation_duration_s": 60.0,
+  "physical_trial_authorization": "Requires separately verified hardware, localization, command adapter and independent stopping; simulation criteria alone never authorize physical actuation",
+  "mission_deadline_by_profile_s": {
+    "nominal": 300.0,
+    "good": 300.0,
+    "moderate": 300.0,
+    "severe": 420.0
+  }
+}

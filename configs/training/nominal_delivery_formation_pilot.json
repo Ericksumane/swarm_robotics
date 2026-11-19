@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "total_environment_steps_per_profile": 12288,
+  "total_environment_steps": 12288,
+  "profiles": [
+    "nominal"
+  ],
+  "counting": "One step advances all three robots in the nominal environment.",
+  "allocation_per_profile": {
+    "formation_fresh": 12288
+  },
+  "seed": 191700,
+  "actor_lr": 5e-05,
+  "epochs": 3,
+  "rollout": 128,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.1,
+  "exploration_std": 0.05,
+  "critic_only_warmup_updates": 4,
+  "source_bundle": "experiments/runs/nominal_pose_local_demos_001/candidate_bundle.pt",
+  "source_sha256": "d30e03839dba157f0e6fcd01eb8025687d16e63d92eade8bc14ed21471aacab3",
+  "task_linear_speed_scale": 1.0,
+  "task_overrides": {
+    "formation_fresh": "configs/tasks/mixed_formation_pose080.json"
+  },
+  "reward_overrides": {
+    "formation_fresh": "configs/training/mixed_formation_pose_reward.json"
+  },
+  "scope": "Nominal mixed-robot pose-formation pilot initialized from local demonstrations, with dispersed curriculum at 1.20 m.",
+  "preserve_task_initialization": true
+}

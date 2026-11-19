@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "task_name": "received_collision_features_v6",
+  "seed": 42,
+  "simulation": {
+    "time_step_s": 0.1,
+    "episode_time_limit_s": 120.0
+  },
+  "team": {
+    "num_agents": 3,
+    "desired_pair_distance_m": 1.0
+  },
+  "mission": {
+    "translation_distance_m": 5.0,
+    "direction_world": [
+      1.0,
+      0.0
+    ],
+    "formation_tolerance_m": 0.1,
+    "formation_ready_duration_s": 2.0,
+    "destination_tolerance_m": 0.2,
+    "stop_linear_speed_tolerance_mps": 0.03,
+    "stop_angular_speed_tolerance_radps": 0.05,
+    "success_hold_duration_s": 2.0
+  },
+  "robot_defaults": {
+    "profile_status": "synthetic_not_hardware_specification",
+    "footprint_radius_m": 0.25,
+    "max_forward_speed_mps": 0.3,
+    "max_reverse_speed_mps": 0.15,
+    "max_yaw_rate_radps": 0.8,
+    "max_linear_acceleration_mps2": 0.3,
+    "max_angular_acceleration_radps2": 0.8
+  },
+  "initialization": {
+    "position_x_range_m": [
+      -1.5,
+      1.5
+    ],
+    "position_y_range_m": [
+      -1.5,
+      1.5
+    ],
+    "heading_range_rad": [
+      -3.141592653589793,
+      3.141592653589793
+    ],
+    "min_center_distance_m": 0.7,
+    "initial_linear_speed_mps": 0.0,
+    "initial_angular_speed_radps": 0.0,
+    "max_sampling_attempts": 1000,
+    "near_formation": {
+      "probability": 0.2,
+      "position_jitter_m": 0.15,
+      "minimum_pair_error_m": 0.12
+    },
+    "hard_examples": {
+      "probability": 0.45,
+      "position_jitter_m": 0.08,
+      "heading_jitter_rad": 0.3,
+      "minimum_pair_error_m": 0.12,
+      "entries": [
+        {
+          "seed": 83000003,
+          "states": [
+            {
+              "x": -0.463293431634495,
+              "y": -1.0489956820791448,
+              "heading": -1.025056037017622,
+              "speed": 0.0,
+              "yaw_rate": 0.0
+            },
+            {
+              "x": 0.8506461230658728,
+              "y": 1.3117292133047749,
+              "heading": 1.3714615835967479,
+              "speed": 0.0,
+              "yaw_rate": 0.0
+            },
+            {
+              "x": 0.38536191528832253,
+              "y": -0.479878418147452,
+              "heading": -0.6655834279557808,
+              "speed": 0.0,
+              "yaw_rate": 0.0
+            }
+          ]
+        },
+        {
+          "seed": 83000005,
+          "states": [
+            {
+              "x": -0.883724552184534,
+              "y": -0.2992478095446085,
+              "heading": 0.6628157645307691,
+              "speed": 0.0,
+              "yaw_rate": 0.0
+            },
+            {
+              "x": -0.8840894787360521,
+              "y": 1.1831599384932172,
+              "heading": -1.2162080002959779,
+              "speed": 0.0,
+              "yaw_rate": 0.0
+            },
+            {
+              "x": 1.179822535556792,
+              "y": -1.295400548875922,
+              "heading": 0.23230378753234904,
+              "speed": 0.0,
+              "yaw_rate": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "operating_area": {
+    "x_bounds_m": [
+      -4.0,
+      10.0
+    ],
+    "y_bounds_m": [
+      -5.0,
+      5.0
+    ]
+  },
+  "observation_contract": "formation_history_risk_v6",
+  "peer_history": {
+    "horizon_s": 3.0,
+    "max_position_error_m": 1.0,
+    "initial_position_error_m": 0.02,
+    "max_linear_acceleration_mps2": 0.3,
+    "max_yaw_rate_radps": 0.8,
+    "max_speed_mps": 0.3,
+    "include_relative_risk": true,
+    "relative_risk_horizon_s": 2.0,
+    "footprint_diameter_m": 0.5
+  }
+}

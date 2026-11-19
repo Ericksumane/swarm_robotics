@@ -1,0 +1,27 @@
+{
+  "actor": "policies/wheeltec_vertex_arc_v1.json",
+  "sha256": "338f3bfcfc5b9f921a6ee43501b628e0c127129bc712d91bf0226bcf0e122674",
+  "contract": "wheeltec_vertex_arc_v1",
+  "status": "selected_for_cooperative_gazebo",
+  "source": "experiments/runs/nominal_wheeltec_vertex_executor_002/actor.json",
+  "hardware_approved": false,
+  "validation_runs": {
+    "nominal": [
+      "nominal_wheeltec_vertex_gazebo_114903",
+      "nominal_wheeltec_vertex_gazebo_114904",
+      "nominal_wheeltec_vertex_gazebo_114905",
+      "nominal_wheeltec_vertex_heldout_194101",
+      "nominal_wheeltec_vertex_heldout_194102"
+    ],
+    "good": [
+      "good_wheeltec_vertex_heldout_194101",
+      "good_wheeltec_vertex_heldout_194102"
+    ],
+    "moderate": [
+      "moderate_wheeltec_vertex_paired_194103_actor"
+    ],
+    "severe": [
+      "severe_wheeltec_vertex_paired_194104_actor"
+    ]
+  }
+}

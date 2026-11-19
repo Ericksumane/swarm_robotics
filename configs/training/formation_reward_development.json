@@ -1,0 +1,9 @@
+{
+  "reward_version": "formation_hold_progress_v3",
+  "formation_weight": 1.0,
+  "motion_weight": 0.05,
+  "collision_penalty": 50.0,
+  "outside_area_penalty": 50.0,
+  "progress_weight": 20.0,
+  "success_bonus": 20.0
+}

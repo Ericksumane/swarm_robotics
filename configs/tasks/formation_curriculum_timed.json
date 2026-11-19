@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "task_name": "formation_hold_curriculum_v1",
+  "seed": 42,
+  "simulation": {
+    "time_step_s": 0.1,
+    "episode_time_limit_s": 30.0
+  },
+  "team": {
+    "num_agents": 3,
+    "desired_pair_distance_m": 1.0
+  },
+  "mission": {
+    "translation_distance_m": 5.0,
+    "direction_world": [
+      1.0,
+      0.0
+    ],
+    "formation_tolerance_m": 0.1,
+    "formation_ready_duration_s": 2.0,
+    "destination_tolerance_m": 0.2,
+    "stop_linear_speed_tolerance_mps": 0.03,
+    "stop_angular_speed_tolerance_radps": 0.05,
+    "success_hold_duration_s": 2.0
+  },
+  "robot_defaults": {
+    "profile_status": "synthetic_not_hardware_specification",
+    "footprint_radius_m": 0.25,
+    "max_forward_speed_mps": 0.3,
+    "max_reverse_speed_mps": 0.15,
+    "max_yaw_rate_radps": 0.8,
+    "max_linear_acceleration_mps2": 0.3,
+    "max_angular_acceleration_radps2": 0.8
+  },
+  "initialization": {
+    "position_x_range_m": [
+      -1.5,
+      1.5
+    ],
+    "position_y_range_m": [
+      -1.5,
+      1.5
+    ],
+    "heading_range_rad": [
+      -3.141592653589793,
+      3.141592653589793
+    ],
+    "min_center_distance_m": 0.7,
+    "initial_linear_speed_mps": 0.0,
+    "initial_angular_speed_radps": 0.0,
+    "max_sampling_attempts": 1000,
+    "near_formation": {
+      "probability": 0.95,
+      "position_jitter_m": 0.05
+    }
+  },
+  "operating_area": {
+    "x_bounds_m": [
+      -4.0,
+      10.0
+    ],
+    "y_bounds_m": [
+      -5.0,
+      5.0
+    ]
+  }
+}

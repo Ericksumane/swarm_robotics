@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "total_environment_steps_per_profile": 6144,
+  "total_environment_steps": 24576,
+  "profiles": [
+    "nominal",
+    "good",
+    "moderate",
+    "severe"
+  ],
+  "counting": "25000 three-robot environment steps per profile; 100000 total. Smoke/evaluation excluded.",
+  "allocation_per_profile": {
+    "cruise": 2048,
+    "cruise_degraded": 2048,
+    "approach": 2048
+  },
+  "seed": 186989,
+  "actor_lr": 1e-05,
+  "epochs": 3,
+  "rollout": 128,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.1,
+  "exploration_std": 0.02,
+  "critic_only_warmup_updates": 4,
+  "source_bundle": "experiments/runs/mixed_speed160_spacing120_001/candidate_bundle.pt",
+  "source_sha256": "8cb53ec5b7bdb1aa6970840c5e8cd5261fd36454a312147fdbef3c5adc693f61",
+  "task_linear_speed_scale": 1.0,
+  "task_overrides": {
+    "cruise": "configs/tasks/mixed_steering_cruise_pilot.json",
+    "cruise_degraded": "configs/tasks/mixed_steering_cruise_degraded_pilot.json",
+    "approach": "configs/tasks/mixed_steering_approach_pilot.json"
+  },
+  "reward_overrides": {
+    "approach": "experiments/runs/arrival_refinement_100k_001/reward.json"
+  },
+  "scope": "Component pilots for cruise, degraded cruise and stop with RosBot steering lag and 5 m cruise goals.",
+  "preserve_task_initialization": true
+}

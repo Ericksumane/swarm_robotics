@@ -1,0 +1,71 @@
+{
+  "status": "research_candidate_reserved_nominal_good_evaluation_not_hardware_validated",
+  "architecture": "local_latched_mappo_v2",
+  "observation_contract": "mission_local_goal_v3",
+  "actor_bundle": "experiments/runs/geometry_control_001/selected_policy_bundle.pt",
+  "task": "configs/tasks/translate_stop_hold_hysteresis.json",
+  "run": "experiments/runs/geometry_control_001/control_good_final",
+  "replay": "experiments/runs/geometry_control_001/gazebo_demo",
+  "demo_seed": 61000000,
+  "approach_distance_m": 0.7,
+  "actor_goal_horizon_m": 0.5,
+  "requires_local_goal_distance_metadata": true,
+  "requires_routing_reset_per_mission": true,
+  "mission_protocol": {
+    "hold_entry_tolerance_m": 0.15,
+    "hold_exit_tolerance_m": 0.2,
+    "physical_success_tolerance_m": 0.2
+  },
+  "evaluation": {
+    "seed": 61000000,
+    "episodes": 40,
+    "baseline": {
+      "successes": 32,
+      "strict_successes": 0,
+      "collisions": 0
+    },
+    "composed": {
+      "successes": 40,
+      "strict_successes": 40,
+      "collisions": 0
+    },
+    "nominal": {
+      "successes": 40,
+      "strict_successes": 40,
+      "collisions": 0
+    },
+    "good": {
+      "successes": 40,
+      "strict_successes": 40,
+      "collisions": 0
+    }
+  },
+  "scope": "Already formed and approximately aligned synthetic three-agent team; 5 m / 120 s; nominal and good synthetic communication; fixed ideal localization",
+  "full_mission_continuous_formation_validated": true,
+  "hardware_validated": false,
+  "bad_severe_evaluated": true,
+  "report": "docs/geometry_control_results.md",
+  "previous_reference": "experiments/references/translation_before_geometry.json",
+  "actor_bundle_sha256": "2fe39a10bfd3a593d7b7497655f36cc3b08d24ee710d9e53e3904c4d1cc07b41",
+  "validation_scope": "40 matched reserved starts per nominal/good profile; already formed, approximately aligned synthetic team; ideal shared-frame localization; 5 m /120 s; not hardware or broad-position acquisition",
+  "degraded_communication_probe": {
+    "role": "exploratory diagnostic, not robustness certification",
+    "seed": 62000000,
+    "episodes": 12,
+    "weights_changed": false,
+    "results": {
+      "moderate": {
+        "successes": 12,
+        "strict_successes": 12,
+        "collisions": 0
+      },
+      "severe": {
+        "successes": 0,
+        "strict_successes": 0,
+        "collisions": 0
+      }
+    }
+  },
+  "severe_robustness_validated": false,
+  "degraded_report": "docs/degraded_communication_probe.md"
+}

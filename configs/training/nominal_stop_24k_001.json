@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "total_environment_steps_per_profile": 24576,
+  "total_environment_steps": 24576,
+  "profiles": [
+    "nominal"
+  ],
+  "counting": "24576 nominal three-robot environment steps.",
+  "allocation_per_profile": {
+    "approach": 24576
+  },
+  "seed": 114750,
+  "actor_lr": 3e-05,
+  "epochs": 3,
+  "rollout": 128,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.1,
+  "exploration_std": 0.05,
+  "critic_only_warmup_updates": 4,
+  "source_bundle": "experiments/runs/wheeltec_arc_executor_001/terminal_refinement_training/candidate_bundle.pt",
+  "source_sha256": "2b4c6bf4bfb2938f53b5133171e87058f97b90313782aee1a216358f80158d5d",
+  "task_linear_speed_scale": 1.0,
+  "task_overrides": {
+    "approach": "experiments/runs/wheeltec_arc_executor_001/terminal_refinement_task.json"
+  },
+  "reward_overrides": {
+    "approach": "experiments/runs/mixed_speed160_spacing120_600k_001/approach/reward.json"
+  },
+  "scope": "Nominal MAPPO approach and stop refinement with mixed dynamics and braking.",
+  "preserve_task_initialization": true
+}

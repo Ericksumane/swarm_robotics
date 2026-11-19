@@ -1,0 +1,44 @@
+{
+  "status": "research_partial_task_completion_not_hardware_validated",
+  "architecture": "local_latched_mappo_v2",
+  "observation_contract": "mission_local_goal_v3",
+  "actor_bundle": "experiments/runs/approach_full_validation_v2_001/policy_bundle.pt",
+  "run": "experiments/runs/approach_full_validation_v2_001/composed",
+  "replay": "experiments/runs/approach_full_validation_v2_001/gazebo_demo",
+  "demo_seed": 55000003,
+  "approach_distance_m": 0.7,
+  "actor_goal_horizon_m": 0.5,
+  "requires_local_goal_distance_metadata": true,
+  "requires_routing_reset_per_mission": true,
+  "evaluation": {
+    "seed": 55000000,
+    "episodes": 40,
+    "baseline": {
+      "successes": 0,
+      "strict_successes": 0,
+      "collisions": 0
+    },
+    "composed": {
+      "successes": 20,
+      "strict_successes": 0,
+      "collisions": 0
+    },
+    "pose_audit": {
+      "mission_successes": 20,
+      "point_and_stop_successes": 20,
+      "episodes": 40,
+      "goal_windows_ready": 20,
+      "stop_windows_ready": 22,
+      "geometry_windows_ready": 40,
+      "failure_stages": {
+        "goal_position": 20,
+        "stop_motion": 0,
+        "final_formation": 0
+      }
+    }
+  },
+  "scope": "Already formed, approximately aligned three-agent synthetic team; good communication; 5 m and 120 s; continuous formation remains unvalidated",
+  "full_mission_continuous_formation_validated": false,
+  "hardware_validated": false,
+  "report": "docs/approach_recovery_results.md"
+}

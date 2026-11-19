@@ -1,0 +1,39 @@
+{
+  "status": "research_candidate_not_hardware_validated",
+  "contract": "formation_relational_v4",
+  "run": "experiments/runs/extended_horizon_001/continued_final",
+  "actor": "experiments/runs/extended_horizon_001/continued_final/actor.pt",
+  "checkpoint": "experiments/runs/extended_horizon_001/continued_final/checkpoint.pt",
+  "replay": "experiments/runs/extended_horizon_001/continued_final/replay.html",
+  "episode_limit_s": 120.0,
+  "num_agents": 3,
+  "pair_distances_m": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "additional_training_steps": 200000,
+  "scope": "near-triangle starts with random headings; formation and stationary hold only",
+  "evaluation": {
+    "seed": 12000000,
+    "episodes": 40,
+    "nominal_successes": 35,
+    "good_successes": 35,
+    "nominal_collisions": 0,
+    "good_collisions": 0,
+    "baseline_nominal_successes": 20,
+    "baseline_good_successes": 23
+  },
+  "full_five_meter_mission_validated": false,
+  "hardware_validated": false,
+  "report": "docs/extended_training_conclusion.md",
+  "broad_initialization_diagnostic": {
+    "seed": 13000000,
+    "episodes": 10,
+    "baseline_successes": 1,
+    "trained_successes": 5,
+    "baseline_collisions": 1,
+    "trained_collisions": 0,
+    "scope": "Small broad-position diagnostic, separate from main near-formation evaluation."
+  }
+}

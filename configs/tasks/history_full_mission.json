@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "task_name": "history_form_align_slot_translate_stop_v1",
+  "seed": 42,
+  "simulation": {
+    "time_step_s": 0.1,
+    "episode_time_limit_s": 300.0
+  },
+  "team": {
+    "num_agents": 3,
+    "desired_pair_distance_m": 1.0
+  },
+  "mission": {
+    "translation_distance_m": 5.0,
+    "direction_world": [
+      1.0,
+      0.0
+    ],
+    "formation_tolerance_m": 0.1,
+    "formation_ready_duration_s": 2.0,
+    "destination_tolerance_m": 0.2,
+    "stop_linear_speed_tolerance_mps": 0.03,
+    "stop_angular_speed_tolerance_radps": 0.05,
+    "success_hold_duration_s": 2.0,
+    "hold_entry_tolerance_m": 0.15,
+    "hold_exit_tolerance_m": 0.2,
+    "startup_heading_tolerance_rad": 0.05
+  },
+  "robot_defaults": {
+    "profile_status": "synthetic_not_hardware_specification",
+    "footprint_radius_m": 0.25,
+    "max_forward_speed_mps": 0.3,
+    "max_reverse_speed_mps": 0.15,
+    "max_yaw_rate_radps": 0.8,
+    "max_linear_acceleration_mps2": 0.3,
+    "max_angular_acceleration_radps2": 0.8
+  },
+  "initialization": {
+    "position_x_range_m": [
+      -1.5,
+      1.5
+    ],
+    "position_y_range_m": [
+      -1.5,
+      1.5
+    ],
+    "heading_range_rad": [
+      -3.141592653589793,
+      3.141592653589793
+    ],
+    "min_center_distance_m": 0.7,
+    "initial_linear_speed_mps": 0.0,
+    "initial_angular_speed_radps": 0.0,
+    "max_sampling_attempts": 1000
+  },
+  "operating_area": {
+    "x_bounds_m": [
+      -4.0,
+      10.0
+    ],
+    "y_bounds_m": [
+      -5.0,
+      5.0
+    ]
+  },
+  "environment": "mission",
+  "observation_contract": "mission_local_goal_v3",
+  "start_in_formation": false,
+  "critic_contract": "mission_relative_v1",
+  "goal_observation_horizon_m": 0.5,
+  "acquisition_routing": {
+    "desired_distance_m": 1.0,
+    "formation_tolerance_m": 0.1,
+    "max_linear_speed_mps": 0.03,
+    "ready_duration_s": 2.0,
+    "time_step_s": 0.1
+  },
+  "formation_peer_history": {
+    "horizon_s": 3.0,
+    "max_position_error_m": 1.0,
+    "initial_position_error_m": 0.02,
+    "max_linear_acceleration_mps2": 0.3,
+    "max_yaw_rate_radps": 0.8,
+    "max_speed_mps": 0.3
+  },
+  "history_startup": {
+    "required_evidence_s": 2.0,
+    "max_evidence_gap_s": 2.0,
+    "certificate_ttl_s": 3.0,
+    "proposal_lead_s": 10.0,
+    "slot_width_s": 5.0,
+    "geometry_tolerance_m": 0.1,
+    "heading_tolerance_rad": 0.05,
+    "minimum_propagation_s": 3.0
+  },
+  "completion_by_profile": {
+    "nominal": {
+      "formation_tolerance_m": 0.1
+    },
+    "good": {
+      "formation_tolerance_m": 0.1
+    },
+    "moderate": {
+      "formation_tolerance_m": 0.15
+    },
+    "severe": {
+      "formation_tolerance_m": 0.2
+    }
+  }
+}

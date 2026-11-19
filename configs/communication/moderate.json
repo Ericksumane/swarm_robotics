@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "profile_name": "moderate",
+  "profile_status": "synthetic_not_measured_wifi",
+  "transmission_frequency_hz": 10.0,
+  "delay_s": 0.1,
+  "loss_probability": 0.1,
+  "max_information_age_s": 0.5,
+  "payload_size_bytes": 64,
+  "channel_options": {
+    "jitter_s": 0.05,
+    "bandwidth_bytes_per_s": 2000.0,
+    "queue_capacity_bytes": 2048,
+    "burst_enter_probability": 0.02,
+    "burst_exit_probability": 0.5,
+    "bad_state_loss_probability": 0.95,
+    "outages": [
+      [
+        15.0,
+        16.0
+      ]
+    ]
+  }
+}

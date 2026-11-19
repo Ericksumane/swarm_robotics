@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "total_environment_steps_per_profile": 200000,
+  "profiles": [
+    "nominal",
+    "good",
+    "moderate",
+    "severe"
+  ],
+  "counting": "One step advances all three robots in one communication-profile environment; three robot transitions per step. Evaluation and smoke steps excluded.",
+  "allocation_per_profile": {
+    "formation_history": 90000,
+    "formation_fresh": 30000,
+    "alignment": 10000,
+    "cruise": 25000,
+    "cruise_degraded": 25000,
+    "approach": 20000
+  },
+  "seed": 105033,
+  "actor_lr": 1e-05,
+  "epochs": 3,
+  "rollout": 128,
+  "gamma": 0.999,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.1,
+  "exploration_std": 0.03,
+  "critic_only_warmup_updates": 2,
+  "source_bundle": "experiments/runs/speed033_campaign_001/baseline_bundle.pt",
+  "source_sha256": "9e3a8a8fa9c4756a4dd9aecb25726b78dce25dd2d132b91ecde87f28212c87e9",
+  "scope": "Six shared MAPPO experts; programmed coordination and supervisors retained. No online deployment training."
+}

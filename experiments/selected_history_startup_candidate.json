@@ -1,0 +1,7 @@
+{
+  "status": "experimental_candidate_not_default",
+  "actor_bundle": "experiments/runs/history_coordination_001/candidate_stationary_routed.pt",
+  "sha256": "b905d87edbeb73f3d4afeda671cbf82ab8b7449240cf7bda53691893ebadcf99",
+  "scope": "Three synthetic robots; Python complete missions and separately recorded Gazebo checks; no hardware validation.",
+  "report": "docs/history_coordination_results.md"
+}

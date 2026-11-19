@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "profile_name": "nominal",
+  "profile_status": "synthetic_development_configuration",
+  "transmission_frequency_hz": 10.0,
+  "delay_s": 0.0,
+  "loss_probability": 0.0,
+  "max_information_age_s": 0.5,
+  "payload_size_bytes": 64
+}

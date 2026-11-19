@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "profile_name": "severe",
+  "profile_status": "synthetic_not_measured_wifi",
+  "transmission_frequency_hz": 10.0,
+  "delay_s": 0.3,
+  "loss_probability": 0.3,
+  "max_information_age_s": 0.5,
+  "payload_size_bytes": 64,
+  "channel_options": {
+    "jitter_s": 0.2,
+    "bandwidth_bytes_per_s": 500.0,
+    "queue_capacity_bytes": 2048,
+    "burst_enter_probability": 0.1,
+    "burst_exit_probability": 0.2,
+    "bad_state_loss_probability": 0.95,
+    "outages": [
+      [
+        10.0,
+        12.0
+      ],
+      [
+        25.0,
+        28.0
+      ]
+    ]
+  }
+}

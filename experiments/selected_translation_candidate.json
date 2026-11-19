@@ -1,0 +1,107 @@
+{
+  "status": "research_candidate_local_network_specialists_not_hardware_validated",
+  "architecture": "local_network_routed_mappo_v3",
+  "observation_contract": "mission_local_goal_v3",
+  "actor_bundle": "experiments/runs/local_network_routing_001/selected_policy_bundle.pt",
+  "actor_bundle_sha256": "9f90c9fe68111f43120900bdb1c192b477612297f48f4f1f19bb87bb6e87c9d0",
+  "task": "configs/tasks/translate_stop_hold_hysteresis.json",
+  "run": "experiments/runs/local_network_routing_001/severe_final",
+  "replay": "experiments/runs/local_network_routing_001/gazebo_demo",
+  "demo_seed": 71000000,
+  "demo_communication": "severe",
+  "approach_distance_m": 0.7,
+  "actor_goal_horizon_m": 0.5,
+  "requires_local_goal_distance_metadata": true,
+  "requires_routing_reset_per_mission": true,
+  "network_routing": {
+    "rule": "cruise_degraded_when_any_peer_invalid",
+    "required_valid_neighbors": 2
+  },
+  "mission_protocol": {
+    "hold_entry_tolerance_m": 0.15,
+    "hold_exit_tolerance_m": 0.2,
+    "physical_success_tolerance_m": 0.2
+  },
+  "evaluation": {
+    "seed": 71000000,
+    "episodes": 40,
+    "baseline": {
+      "successes": 0,
+      "strict_successes": 0,
+      "collisions": 0
+    },
+    "composed": {
+      "successes": 40,
+      "strict_successes": 40,
+      "collisions": 0
+    },
+    "profiles": {
+      "nominal": {
+        "successes": 38,
+        "strict_successes": 38,
+        "collisions": 0
+      },
+      "good": {
+        "successes": 40,
+        "strict_successes": 40,
+        "collisions": 0
+      },
+      "moderate": {
+        "successes": 40,
+        "strict_successes": 40,
+        "collisions": 0
+      },
+      "severe": {
+        "successes": 40,
+        "strict_successes": 40,
+        "collisions": 0
+      }
+    },
+    "reference_profiles": {
+      "nominal": {
+        "successes": 38,
+        "strict_successes": 38,
+        "collisions": 0
+      },
+      "good": {
+        "successes": 40,
+        "strict_successes": 40,
+        "collisions": 0
+      },
+      "moderate": {
+        "successes": 40,
+        "strict_successes": 40,
+        "collisions": 0
+      },
+      "severe": {
+        "successes": 0,
+        "strict_successes": 0,
+        "collisions": 0
+      }
+    },
+    "paired_cases": {
+      "nominal": {
+        "rescued": 0,
+        "regressed": 0
+      },
+      "good": {
+        "rescued": 0,
+        "regressed": 0
+      },
+      "moderate": {
+        "rescued": 0,
+        "regressed": 0
+      },
+      "severe": {
+        "rescued": 40,
+        "regressed": 0
+      }
+    }
+  },
+  "scope": "Already formed and approximately aligned synthetic three-robot team; ideal shared localization; 5 m /120 s; fixed synthetic network profiles; 40 matched 71M starts per profile; not dispersed acquisition or hardware",
+  "dispersed_start_mission_validated": false,
+  "hardware_validated": false,
+  "report": "docs/network_recovery_results.md",
+  "dispersed_report": "docs/dispersed_validation_results.md",
+  "previous_reference": "experiments/references/translation_before_network_recovery.json"
+}

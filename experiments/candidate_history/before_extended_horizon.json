@@ -1,0 +1,28 @@
+{
+  "status": "research_candidate_not_hardware_validated",
+  "contract": "formation_relational_v4",
+  "run": "experiments/runs/relational_revision_001/checkpoint_0020480",
+  "actor": "experiments/runs/relational_revision_001/checkpoint_0020480/actor.pt",
+  "checkpoint": "experiments/runs/relational_revision_001/checkpoint_0020480/checkpoint.pt",
+  "replay": "experiments/runs/relational_revision_001/checkpoint_0020480/replay.html",
+  "training_steps_at_selected_checkpoint": 20480,
+  "total_experiment_training_steps": 240000,
+  "evaluation": {
+    "seed": 5000000,
+    "episodes": 40,
+    "nominal_successes": 11,
+    "good_successes": 10,
+    "nominal_collisions": 0,
+    "good_collisions": 0,
+    "previous_nominal_successes": 2
+  },
+  "scope": "three synthetic agents, near-triangle starts with random headings, formation and stationary hold",
+  "broad_initialization": {
+    "seed": 6000000,
+    "episodes": 10,
+    "successes": 0,
+    "collisions": 1
+  },
+  "full_five_meter_mission_validated": false,
+  "report": "docs/deep_training_results.md"
+}

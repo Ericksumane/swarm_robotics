@@ -1,0 +1,11 @@
+{
+  "reward_version": "alignment_progress_and_hold_v1",
+  "formation": 20.0,
+  "alignment_progress": 20.0,
+  "alignment_heading": 2.0,
+  "alignment_linear": 2.0,
+  "alignment_turning": 0.01,
+  "time": 0.02,
+  "success_bonus": 20.0,
+  "failure_penalty": 200.0
+}

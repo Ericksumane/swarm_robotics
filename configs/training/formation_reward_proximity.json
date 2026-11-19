@@ -1,0 +1,11 @@
+{
+  "reward_version": "formation_hold_proximity_v4",
+  "formation_weight": 1.0,
+  "motion_weight": 0.05,
+  "collision_penalty": 50.0,
+  "outside_area_penalty": 50.0,
+  "progress_weight": 20.0,
+  "success_bonus": 20.0,
+  "proximity_weight": 10.0,
+  "proximity_margin_m": 0.3
+}

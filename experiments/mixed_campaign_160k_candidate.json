@@ -1,0 +1,211 @@
+{
+  "status": "gazebo_paired_seeds_passed_after_severe_confirmation_fix",
+  "source": "experiments/runs/mixed_actor_campaign_1m_001/checkpoint_0020",
+  "steps": 160000,
+  "actor_directory": "policies/mixed_campaign_160k",
+  "sha256": {
+    "go2_actor.json": "dd2536a688bebe1aeab087cc470e7ea95ff9542f7ffab9be23957f8a8c938c83",
+    "wheeltec_actor.json": "25785f13a7565f476eeb6283c08b7218ade85be659ee93344875dd597532cde3",
+    "jackal_actor.json": "b4fe591a52cceeb21660141c6b0b5473d26c118bea98c8982304a8df8d8e2807",
+    "translation_actor.json": "6338b3ff974cd5a669cccddb5ac4e50eb673869f3e7cd6814a3c016d456bf263"
+  },
+  "validation_seeds": [
+    196801,
+    196802
+  ],
+  "profiles": [
+    "nominal",
+    "good",
+    "moderate",
+    "severe"
+  ],
+  "hardware_approved": false,
+  "validation_results": {
+    "196801/nominal": {
+      "run": "experiments/runs/campaign_160k_paired_196801_nominal",
+      "reason": "cooperative_mission_success",
+      "simulated_s": 122.2,
+      "formation_completed_s": 105.0,
+      "precision_started_s": null,
+      "minimum_center_distance_m": 0.9636442646249306,
+      "first_motion_commands_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": {
+        "translation_m": 4.973816093817255,
+        "max_destination_error_m": 0.03525340241455633,
+        "max_heading_error_deg": 1.4079560583864241,
+        "max_pair_error_m": 0.012963971768090055,
+        "settled": true
+      }
+    },
+    "196801/good": {
+      "run": "experiments/runs/campaign_160k_paired_196801_good",
+      "reason": "cooperative_mission_success",
+      "simulated_s": 86.6,
+      "formation_completed_s": 67.3,
+      "precision_started_s": null,
+      "minimum_center_distance_m": 0.7470515460716103,
+      "first_motion_commands_s": [
+        0.09999999999999964,
+        0.09999999999999964,
+        0.09999999999999964
+      ],
+      "translation": {
+        "translation_m": 4.971619490650229,
+        "max_destination_error_m": 0.03215081537284112,
+        "max_heading_error_deg": 0.560939123634172,
+        "max_pair_error_m": 0.009967476027006983,
+        "settled": true
+      }
+    },
+    "196801/moderate": {
+      "run": "experiments/runs/campaign_160k_paired_196801_moderate",
+      "reason": "cooperative_mission_success",
+      "simulated_s": 90.4,
+      "formation_completed_s": 68.10000000000001,
+      "precision_started_s": null,
+      "minimum_center_distance_m": 1.01280509127363,
+      "first_motion_commands_s": [
+        0.2999999999999998,
+        0.2999999999999998,
+        0.2999999999999998
+      ],
+      "translation": {
+        "translation_m": 4.993430217698641,
+        "max_destination_error_m": 0.02108487373359136,
+        "max_heading_error_deg": 0.8554519201009402,
+        "max_pair_error_m": 0.02340892748416068,
+        "settled": true
+      }
+    },
+    "196801/severe": {
+      "run": "experiments/runs/campaign_160k_paired_196801_severe",
+      "reason": "cooperative_formation_timeout",
+      "simulated_s": 90.0,
+      "formation_completed_s": null,
+      "precision_started_s": 85.3,
+      "minimum_center_distance_m": 0.9864772463378542,
+      "first_motion_commands_s": [
+        0.7999999999999989,
+        0.7999999999999989,
+        0.7999999999999989
+      ],
+      "translation": null
+    },
+    "196802/nominal": {
+      "run": "experiments/runs/campaign_160k_paired_196802_nominal",
+      "reason": "cooperative_mission_success",
+      "simulated_s": 54.9,
+      "formation_completed_s": 38.3,
+      "precision_started_s": null,
+      "minimum_center_distance_m": 1.0366148879333,
+      "first_motion_commands_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": {
+        "translation_m": 4.971395689773883,
+        "max_destination_error_m": 0.03429063919782161,
+        "max_heading_error_deg": 1.2303733610329377,
+        "max_pair_error_m": 0.0174579259444394,
+        "settled": true
+      }
+    },
+    "196802/good": {
+      "run": "experiments/runs/campaign_160k_paired_196802_good",
+      "reason": "cooperative_mission_success",
+      "simulated_s": 61.9,
+      "formation_completed_s": 42.6,
+      "precision_started_s": null,
+      "minimum_center_distance_m": 1.0522897558900906,
+      "first_motion_commands_s": [
+        0.09999999999999964,
+        0.09999999999999964,
+        0.09999999999999964
+      ],
+      "translation": {
+        "translation_m": 4.9771698939958355,
+        "max_destination_error_m": 0.03064827247512972,
+        "max_heading_error_deg": 0.4368084539822181,
+        "max_pair_error_m": 0.0132810482042649,
+        "settled": true
+      }
+    },
+    "196802/moderate": {
+      "run": "experiments/runs/campaign_160k_paired_196802_moderate",
+      "reason": "cooperative_mission_success",
+      "simulated_s": 67.60000000000001,
+      "formation_completed_s": 45.2,
+      "precision_started_s": null,
+      "minimum_center_distance_m": 0.7360740858332735,
+      "first_motion_commands_s": [
+        0.6000000000000005,
+        0.6000000000000005,
+        0.6000000000000005
+      ],
+      "translation": {
+        "translation_m": 4.996094289447683,
+        "max_destination_error_m": 0.02683448147583038,
+        "max_heading_error_deg": 2.8877689896952847,
+        "max_pair_error_m": 0.02936662504093257,
+        "settled": true
+      }
+    },
+    "196802/severe": {
+      "run": "experiments/runs/campaign_160k_paired_196802_severe",
+      "reason": "cooperative_formation_timeout",
+      "simulated_s": 90.0,
+      "formation_completed_s": null,
+      "precision_started_s": 72.7,
+      "minimum_center_distance_m": 0.7380762170014267,
+      "first_motion_commands_s": [
+        1.2999999999999998,
+        1.2999999999999998,
+        1.2999999999999998
+      ],
+      "translation": null
+    }
+  },
+  "severe_confirmation_retests": {
+    "196801": {
+      "run": "experiments/runs/campaign_160k_severe_confirmation_196801",
+      "reason": "cooperative_mission_success",
+      "simulated_s": 122.7,
+      "formation_completed_s": 85.4,
+      "translation": {
+        "translation_m": 5.041041812788028,
+        "max_destination_error_m": 0.06194944536891291,
+        "max_heading_error_deg": 4.295038851129355,
+        "max_pair_error_m": 0.04093705927974467,
+        "settled": true
+      },
+      "first_motion_commands_s": [
+        0.7999999999999998,
+        0.7999999999999998,
+        0.7999999999999998
+      ]
+    },
+    "196802": {
+      "run": "experiments/runs/campaign_160k_severe_confirmation_196802",
+      "reason": "cooperative_mission_success",
+      "simulated_s": 120.7,
+      "formation_completed_s": 75.0,
+      "translation": {
+        "translation_m": 5.020291673453286,
+        "max_destination_error_m": 0.047096201732775574,
+        "max_heading_error_deg": 2.6179737162286045,
+        "max_pair_error_m": 0.035147763292993295,
+        "settled": true
+      },
+      "first_motion_commands_s": [
+        1.2999999999999998,
+        1.2999999999999998,
+        1.2999999999999998
+      ]
+    }
+  }
+}
