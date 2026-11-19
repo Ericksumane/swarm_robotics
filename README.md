@@ -6,8 +6,7 @@ investigating AI-based cooperative and decentralized control methods for robot
 swarms. The work focuses on developing and evaluating control strategies under
 practical inter-robot communication constraints, including limited bandwidth,
 latency, packet loss, communication range and changing network topology.
-Potential approaches, including multi-agent reinforcement learning, are tested
-in simulation and, where feasible, on mobile robot hardware.
+The project explores approaches such as multi-agent reinforcement learning and evaluates them in simulation. Deployment packages have been prepared for supervised trials, but the system has yet to be tested on physical robots.
 
 The mixed-fleet mission starts three robots from dispersed planar poses, forms
 an aligned triangle with 1.20 m between robot centres, translates it 5 meters in the
