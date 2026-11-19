@@ -1,4 +1,4 @@
-# Communication-Robust Multi-Robot Formation Control
+# Communication-Robust Multi-Robot Formation Control with Multi-Agent Reinforcement Learning
 
 Project developed by Erick Sumane for my internship, which began in September
 2026 at JKK (Járműipari Kutatóközpont, Vehicle Industry Research Center),
