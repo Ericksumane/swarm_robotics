@@ -1,4 +1,4 @@
-# Communication-Robust Multi-Robot Formation Control with Multi-Agent Reinforcement Learning
+# AI-Based Cooperative and Decentralized Control for Robot Swarms Under Communication Constraints
 
 Project developed by Erick Sumane for my internship, which began in September
 2026 at JKK (Járműipari Kutatóközpont, Vehicle Industry Research Center),
